@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "blogposts",
+  "info": {
+    "name": "blogpost",
+    "description": "This is a blog post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "model": "user",
+      "via": "blogposts",
+      "plugin": "users-permissions"
+    }
+  }
+}
